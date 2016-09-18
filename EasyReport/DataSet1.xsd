@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EasyReportConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EasyReportConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EasyReport.Properties.Settings.GlobalReference.Default.EasyReportConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EasyReportConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        projekti.naziv, projekti.id_projekta, zaposlenici.id_zaposlenika, zaposlenici.ime, zaposlenici.prezime, zaposlenici_projekti.id_zaposlenika AS Expr1, zaposlenici_projekti.id_projekta AS Expr2
+FROM            projekti INNER JOIN
+                         zaposlenici_projekti ON projekti.id_projekta = zaposlenici_projekti.id_projekta INNER JOIN
+                         zaposlenici ON zaposlenici_projekti.id_zaposlenika = zaposlenici.id_zaposlenika</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="naziv" DataSetColumn="naziv" />
+              <Mapping SourceColumn="id_projekta" DataSetColumn="id_projekta" />
+              <Mapping SourceColumn="id_zaposlenika" DataSetColumn="id_zaposlenika" />
+              <Mapping SourceColumn="ime" DataSetColumn="ime" />
+              <Mapping SourceColumn="prezime" DataSetColumn="prezime" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_UserColumnName="naziv" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_projekta" msprop:Generator_ColumnVarNameInTable="columnid_projekta" msprop:Generator_ColumnPropNameInRow="id_projekta" msprop:Generator_ColumnPropNameInTable="id_projektaColumn" msprop:Generator_UserColumnName="id_projekta" type="xs:int" />
+              <xs:element name="id_zaposlenika" msprop:Generator_ColumnVarNameInTable="columnid_zaposlenika" msprop:Generator_ColumnPropNameInRow="id_zaposlenika" msprop:Generator_ColumnPropNameInTable="id_zaposlenikaColumn" msprop:Generator_UserColumnName="id_zaposlenika" type="xs:int" />
+              <xs:element name="ime" msprop:Generator_ColumnVarNameInTable="columnime" msprop:Generator_ColumnPropNameInRow="ime" msprop:Generator_ColumnPropNameInTable="imeColumn" msprop:Generator_UserColumnName="ime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prezime" msprop:Generator_ColumnVarNameInTable="columnprezime" msprop:Generator_ColumnPropNameInRow="prezime" msprop:Generator_ColumnPropNameInTable="prezimeColumn" msprop:Generator_UserColumnName="prezime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" />
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:id_projekta" />
+      <xs:field xpath="mstns:id_zaposlenika" />
+      <xs:field xpath="mstns:Expr1" />
+      <xs:field xpath="mstns:Expr2" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
